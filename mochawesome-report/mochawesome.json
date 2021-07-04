@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-06-12T21:26:42.808Z",
+    "end": "2021-06-12T21:26:52.925Z",
+    "duration": 10117,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f993949a-2b99-47ef-9a9b-ce1ad7dd5f25",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test1.js",
+      "file": "cypress/integration/examples/test1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "542493b5-61dc-4817-835b-ad7b63ae4d16",
+          "title": "My First Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "My First Test Case",
+              "fullTitle": "My First Test Suite My First Test Case",
+              "timedOut": null,
+              "duration": 7370,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get(\".search-keyword\").type(\"Ca\");\ncy.wait(2000);\ncy.get(\".product:visible\").should(\"have.length\", 4);\ncy.get(\".products\").as(\"productLocator\");\ncy.get(\"@productLocator\").find(\".product\").should(\"have.length\", 4).then(function () {\n  console.log(\"Hello\");\n});\ncy.get(\"@productLocator\").find(\".product\").eq(1).contains(\"ADD TO CART\").click();\ncy.get(\"@productLocator\").find(\".product\").each(($el, index, $list) => {\n  const textVeg = $el.find(\"h4.product-name\").text();\n  if (textVeg.includes(\"Cashews\")) {\n    $el.find(\"button\").click();\n  }\n});\ncy.get(\".brand\").should(\"have.text\", \"GREENKART\"); //Prints in logs\ncy.get(\".brand\").then(function (logoElement) {\n  cy.log(logoElement.text());\n});",
+              "err": {},
+              "uuid": "75a71ad6-8864-4883-a9c7-d240772aaa1b",
+              "parentUUID": "542493b5-61dc-4817-835b-ad7b63ae4d16",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "75a71ad6-8864-4883-a9c7-d240772aaa1b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7370,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
